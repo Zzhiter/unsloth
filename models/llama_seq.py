@@ -1631,6 +1631,8 @@ class FastLlamaModelSequenceClassification:
                     num_labels              = num_labels,
                     **kwargs,
                 )
+            print("1111")
+            print(model)
         else:
             model = AutoModelForSequenceClassification.from_pretrained(
                 model_name,

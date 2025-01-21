@@ -2190,12 +2190,16 @@ class FastLlamaModel:
             pass
         pass
         model = _get_peft_model(model, lora_config)
+        print(222)
+        print(model)
 
         model._saved_temp_tokenizer = _saved_temp_tokenizer
 
         # model = FastLlamaModel.patch_peft_model(model, use_gradient_checkpointing)
         model = FastLlamaModelSequenceClassification.patch_peft_model(model, use_gradient_checkpointing)
-
+        print(333)
+        print(model)
+        
         # Now patch lm_head and embed_tokens
         if train_embed_tokens:
             print("Unsloth: Casting embed_tokens to float32")
