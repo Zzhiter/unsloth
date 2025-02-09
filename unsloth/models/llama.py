@@ -1788,6 +1788,7 @@ class FastLlamaModel:
                 enable_lora            = True,
                 max_lora_rank          = max_lora_rank,
                 disable_log_stats      = disable_log_stats,
+                device = "cuda:1"
             )
             for allowed_arg in allowed_args:
                 if allowed_arg not in load_vllm_kwargs and allowed_arg in kwargs:
